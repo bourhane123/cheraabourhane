@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import portrait from "@/assets/portrait.jpg";
+import { caseStudies } from "@/data/case-studies";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -199,40 +200,47 @@ function Index() {
         </div>
       </section>
 
-      {/* CASE STUDY */}
+      {/* CASE STUDIES */}
       <section id="work" className="py-28 bg-card/30 border-y border-border/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <SectionLabel num="02" label="Case Study" />
-          <div className="grid lg:grid-cols-12 gap-10 mb-14">
-            <div className="lg:col-span-8">
-              <Mono>Home Decor & Accessories</Mono>
-              <h2 className="font-display text-5xl sm:text-7xl mt-3">Classy House</h2>
-              <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Built and optimized structured Meta campaigns to increase purchases, strengthen engagement, and scale website performance through testing, retargeting, and offer-driven creatives.
-              </p>
-            </div>
-            <div className="lg:col-span-4 space-y-4 lg:pt-6">
-              <div className="flex justify-between border-b border-border/60 pb-2"><Mono>Objective</Mono><span className="text-sm">Scale purchases</span></div>
-              <div className="flex justify-between border-b border-border/60 pb-2"><Mono>Strategy</Mono><span className="text-sm">Catalog + Retargeting</span></div>
-              <div className="flex justify-between border-b border-border/60 pb-2"><Mono>Format</Mono><span className="text-sm">Video 52.2%</span></div>
-              <div className="flex justify-between border-b border-border/60 pb-2"><Mono>Top Theme</Mono><span className="text-sm">Store / Community</span></div>
-            </div>
+          <SectionLabel num="02" label="Selected Work" />
+          <div className="grid lg:grid-cols-12 gap-10 mb-16">
+            <h2 className="lg:col-span-7 text-4xl sm:text-6xl leading-[1.05]">
+              Three systems.<br /><span className="gradient-text italic">One discipline.</span>
+            </h2>
+            <p className="lg:col-span-5 lg:pt-4 text-muted-foreground text-lg leading-relaxed">
+              Each case study breaks down the strategy, execution, and measurable outcomes — from single-brand scaling to multi-account infrastructure.
+            </p>
           </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-6 gap-px bg-border/60 border border-border/60">
-            {caseMetrics.map((m) => (
-              <div key={m.l} className="bg-background p-6">
-                <div className="font-display text-3xl lg:text-4xl text-gold">{m.v}</div>
-                <Mono>{m.l}</Mono>
-              </div>
+          <div className="space-y-px">
+            {caseStudies.map((cs, i) => (
+              <Link
+                key={cs.slug}
+                to="/work/$slug"
+                params={{ slug: cs.slug }}
+                className="group grid grid-cols-12 gap-6 items-baseline py-8 border-t border-border/60 px-2 hover:bg-background/60 transition-colors"
+              >
+                <div className="col-span-2 lg:col-span-1 font-mono text-xs text-gold">0{i + 1}</div>
+                <div className="col-span-10 lg:col-span-5">
+                  <h3 className="font-display text-2xl lg:text-4xl leading-tight group-hover:translate-x-2 group-hover:text-gold transition-all">{cs.client}</h3>
+                  <Mono>{cs.industry}</Mono>
+                </div>
+                <p className="col-span-10 lg:col-span-5 text-muted-foreground leading-relaxed">{cs.tagline}</p>
+                <div className="col-span-2 lg:col-span-1 text-right font-display text-2xl text-gold group-hover:translate-x-1 transition-transform">→</div>
+              </Link>
             ))}
           </div>
 
           <div className="mt-10 p-8 border border-gold/30 bg-gradient-to-br from-gold/5 to-transparent">
-            <Mono>Key takeaway</Mono>
-            <p className="mt-3 font-display text-xl lg:text-2xl leading-snug max-w-3xl">
-              Offer-driven creatives, retargeting, and daily optimization turned engagement into profitable purchases — and a <span className="text-gold">18.2x ROAS</span>.
-            </p>
+            <Mono>Featured numbers</Mono>
+            <div className="mt-4 grid grid-cols-2 lg:grid-cols-6 gap-6">
+              {caseMetrics.map((m) => (
+                <div key={m.l}>
+                  <div className="font-display text-2xl lg:text-3xl text-gold">{m.v}</div>
+                  <Mono>{m.l}</Mono>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
