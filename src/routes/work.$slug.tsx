@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { caseStudies, getAdjacent, getCaseStudy } from "@/data/case-studies";
+import { caseStudies, getAdjacent, getCaseStudy, type CaseStudy } from "@/data/case-studies";
 
 export const Route = createFileRoute("/work/$slug")({
   head: ({ params }) => {
@@ -37,7 +37,7 @@ function Mono({ children }: { children: React.ReactNode }) {
 }
 
 function CaseStudyPage() {
-  const c = Route.useLoaderData();
+  const c = Route.useLoaderData() as CaseStudy;
   const { prev, next } = getAdjacent(c.slug);
   const idx = caseStudies.findIndex((x) => x.slug === c.slug) + 1;
 
