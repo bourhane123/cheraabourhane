@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { caseStudies, getAdjacent, getCaseStudy, type CaseStudy } from "@/data/case-studies";
+import logoMark from "@/assets/logo-mark.png";
+import logoFull from "@/assets/logo-full.png";
 
 export const Route = createFileRoute("/work/$slug")({
   head: ({ params }) => {
@@ -46,8 +48,8 @@ function CaseStudyPage() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/50">
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="h-8 w-8 grid place-items-center rounded-sm border border-gold/60 text-gold font-display text-sm">CB</span>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logoMark} alt="Cheraa Bourhane" className="h-9 w-auto" />
             <span className="font-mono text-xs uppercase tracking-[0.3em] hidden sm:inline">Cheraa Bourhane</span>
           </Link>
           <Link to="/" className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-gold transition-colors">
@@ -224,7 +226,7 @@ function CaseStudyPage() {
       <footer className="border-t border-border/50 py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="h-7 w-7 grid place-items-center rounded-sm border border-gold/60 text-gold font-display text-xs">CB</span>
+            <img src={logoFull} alt="Cheraa Bourhane" className="h-10 w-auto" />
             <Mono>© 2026 Cheraa Bourhane</Mono>
           </div>
           <Mono>Performance Marketer · Meta Ads Specialist</Mono>
