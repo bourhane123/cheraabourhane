@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import portrait from "@/assets/portrait.jpg";
+import logoMark from "@/assets/logo-mark.png";
+import logoFull from "@/assets/logo-full.png";
 import { caseStudies } from "@/data/case-studies";
 
 export const Route = createFileRoute("/")({
@@ -78,9 +80,9 @@ function Index() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/50">
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 group">
-            <span className="h-8 w-8 grid place-items-center rounded-sm border border-gold/60 text-gold font-display text-sm">CB</span>
-            <span className="font-mono text-xs uppercase tracking-[0.3em]">Cheraa Bourhane</span>
+          <a href="#top" className="flex items-center gap-3 group">
+            <img src={logoMark} alt="Cheraa Bourhane" className="h-9 w-auto" />
+            <span className="font-mono text-xs uppercase tracking-[0.3em] hidden sm:inline">Cheraa Bourhane</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#work" className="hover:text-gold transition-colors">Work</a>
@@ -153,7 +155,7 @@ function Index() {
                 alt="Cheraa Bourhane portrait"
                 width={900}
                 height={1200}
-                className="relative w-full h-full object-cover grayscale-[0.2] border border-gold/30"
+                className="relative w-full h-full object-cover border border-gold/30"
               />
               <div className="absolute -bottom-4 -left-4 bg-card border border-gold/40 p-4 max-w-[200px] shadow-[var(--shadow-card)]">
                 <Mono>Specialist</Mono>
@@ -338,7 +340,7 @@ function Index() {
       <footer className="border-t border-border/50 py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="h-7 w-7 grid place-items-center rounded-sm border border-gold/60 text-gold font-display text-xs">CB</span>
+            <img src={logoFull} alt="Cheraa Bourhane" className="h-10 w-auto" />
             <Mono>© 2026 Cheraa Bourhane</Mono>
           </div>
           <Mono>Performance Marketer · Meta Ads Specialist</Mono>
