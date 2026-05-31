@@ -80,9 +80,9 @@ function Index() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/60 border-b border-border/50">
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 group">
-            <span className="h-8 w-8 grid place-items-center rounded-sm border border-gold/60 text-gold font-display text-sm">CB</span>
-            <span className="font-mono text-xs uppercase tracking-[0.3em]">Cheraa Bourhane</span>
+          <a href="#top" className="flex items-center gap-3 group">
+            <img src={logoMark} alt="Cheraa Bourhane" className="h-9 w-auto" />
+            <span className="font-mono text-xs uppercase tracking-[0.3em] hidden sm:inline">Cheraa Bourhane</span>
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#work" className="hover:text-gold transition-colors">Work</a>
