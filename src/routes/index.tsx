@@ -155,7 +155,7 @@ function Index() {
                 alt="Cheraa Bourhane portrait"
                 width={900}
                 height={1200}
-                className="relative w-full h-full object-cover grayscale-[0.2] border border-gold/30"
+                className="relative w-full h-full object-cover border border-gold/30"
               />
               <div className="absolute -bottom-4 -left-4 bg-card border border-gold/40 p-4 max-w-[200px] shadow-[var(--shadow-card)]">
                 <Mono>Specialist</Mono>
