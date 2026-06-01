@@ -86,11 +86,12 @@ function Index() {
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#work" className="hover:text-gold transition-colors">Work</a>
-            <Link to="/portfolio" className="hover:text-gold transition-colors">Portfolio</Link>
-            <Link to="/resume" className="hover:text-gold transition-colors">Resume</Link>
             <a href="#services" className="hover:text-gold transition-colors">Services</a>
             <a href="#process" className="hover:text-gold transition-colors">Process</a>
             <a href="#contact" className="hover:text-gold transition-colors">Contact</a>
+            <span className="h-4 w-px bg-border" />
+            <Link to="/portfolio" className="font-mono text-xs uppercase tracking-[0.2em] text-gold border border-gold/40 px-3 py-1.5 hover:bg-gold hover:text-ink transition-colors">Portfolio</Link>
+            <Link to="/resume" className="font-mono text-xs uppercase tracking-[0.2em] text-gold border border-gold/40 px-3 py-1.5 hover:bg-gold hover:text-ink transition-colors">Resume</Link>
           </div>
           <a
             href="https://wa.me/213659201481"
