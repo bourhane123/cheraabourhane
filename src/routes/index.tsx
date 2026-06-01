@@ -87,6 +87,7 @@ function Index() {
           <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#work" className="hover:text-gold transition-colors">Work</a>
             <Link to="/portfolio" className="hover:text-gold transition-colors">Portfolio</Link>
+            <Link to="/resume" className="hover:text-gold transition-colors">Resume</Link>
             <a href="#services" className="hover:text-gold transition-colors">Services</a>
             <a href="#process" className="hover:text-gold transition-colors">Process</a>
             <a href="#contact" className="hover:text-gold transition-colors">Contact</a>
