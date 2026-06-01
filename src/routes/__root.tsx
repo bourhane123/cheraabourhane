@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "CB" },
+      { name: "description", content: "Your Beautiful WebSpace helps you build a stunning personal website with case study pages, portfolio, and social links." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "CB" },
+      { property: "og:description", content: "Your Beautiful WebSpace helps you build a stunning personal website with case study pages, portfolio, and social links." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "CB" },
+      { name: "twitter:description", content: "Your Beautiful WebSpace helps you build a stunning personal website with case study pages, portfolio, and social links." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/8YyqPSvEd6a8t1iDHoMUxRUhXmJ3/social-images/social-1780278354192-1000026009.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/8YyqPSvEd6a8t1iDHoMUxRUhXmJ3/social-images/social-1780278354192-1000026009.webp" },
     ],
     links: [
       {
